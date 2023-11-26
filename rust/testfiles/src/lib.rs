@@ -12,6 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-module github.com/jeremyje/testfiles
+use include_dir::{include_dir, Dir};
 
-go 1.16
+static TESTFILES_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/../../testfiles/");
+
+pub fn get() -> &'static Dir<'static> {
+    &TESTFILES_DIR
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn get_with_glob() {
+        let result = get();
+        let files = result.find("document/*").unwrap();
+        let col: Vec<_> = files.collect();
+        
+        assert_eq!(col.len(), 8);
+    }
+}
