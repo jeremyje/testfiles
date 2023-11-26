@@ -14,7 +14,7 @@
 
 [package]
 name = "testfiles"
-version = "0.1.1"
+version = "0.0.4"
 authors = ["Jeremy Edwards"]
 edition = "2021"
 rust-version = "1.56"
@@ -25,6 +25,7 @@ license = "Apache-2.0"
 keywords = ["test", "testing", "data", "test-files"]
 categories = ["development-tools::testing", "encoding", "multimedia"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+include = ["src/**"]
 
 [badges]
 maintenance = { status = "experimental" }
