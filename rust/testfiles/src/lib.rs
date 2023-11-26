@@ -14,7 +14,7 @@
 
 use include_dir::{include_dir, Dir};
 
-static TESTFILES_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/../../testfiles/");
+static TESTFILES_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/../../../testfiles/testfiles/");
 
 pub fn get() -> &'static Dir<'static> {
     &TESTFILES_DIR
