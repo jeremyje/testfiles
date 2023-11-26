@@ -12,25 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+[package]
+name = "testfiles"
+version = "0.1.0"
+authors = ["Jeremy Edwards"]
+edition = "2021"
+readme = "https://github.com/jeremyje/testfiles/blob/main/README.md"
+rust-version = "1.56"
 
-# Test binary, built with `go test -c`
-*.test
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
-go.work
-target/
+[dependencies]
+include_dir = { version = "0.7.3", features = ["glob", "metadata"] }
