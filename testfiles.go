@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Package testfiles provides test files of popular file formats for tests.
 package testfiles
 
 import (
